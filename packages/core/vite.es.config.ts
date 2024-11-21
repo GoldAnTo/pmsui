@@ -13,11 +13,6 @@ function getDirectoriesSync(basePath: string) {
     );
 }
 
-const COMP_NAMES = [
-    "Button"
-] as const
-
-
 export default defineConfig({
     plugins: [vue(), dts({
         tsconfigPath: '../../tsconfig.build.json',
