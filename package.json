@@ -7,7 +7,7 @@
     "dev": "pnpm --filter @pmsui/play dev",
     "docs:dev": "pnpm --filter @pmsui/docs dev",
     "docs:build": "pnpm --filter @pmsui/docs build",
-    "test": "echo 'todo'"
+    "test": "pnpm --filter @pmsui/components test"
   },
   "keywords": [],
   "author": "",

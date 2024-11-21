@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-<ErButton></ErButton>
+<ErButton type="primary" size="small">222222222</ErButton>
 
 </template>
 
