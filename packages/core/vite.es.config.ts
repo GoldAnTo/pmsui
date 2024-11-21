@@ -30,44 +30,40 @@ export default defineConfig({
             name: "pmsui",
             fileName: "index",
             formats: ["es"]
-        }
-    },
-    rollupOptions: {
-        external: [
-            "vue",
-            "@fortawesome/fontawesome-svg-core",
-            "@fortawesome/free-solid-svg-icons",
-            "@fortawesome/vue-fontawesome",
-            "@popperjs/core",
-            "async-validator",
-        ],
-        outPut: {
-            assetFileNames: (assetInfo: any) => {
-                if (assetInfo.name === 'style.css') {
-                    return 'index.css'
-                }
-                return assetInfo.name as string
-            },
-            manualChunks(id: any) {
-                if (includes(id, "node_modules")) return "vendor";
-
-                if (includes(id, "/packages/hooks")) return "hooks";
-
-                if (
-                    includes(id, "/packages/utils") ||
-                    includes(id, "plugin-vue:export-helper")
-                ) return "utils";
-
-                // for (const item of getDirectoriesSync("../components")) {
-                //     console.log(item,'item');
-                //     if (includes(id, `/packages/components/${item}`)) return item;
-                // }
-                for ( const item  of COMP_NAMES) {
-                    if (id.includes(`/packages/components/${item}`)) {
-                        return item
+        },
+        rollupOptions: {
+            external: [
+                "vue",
+                "@fortawesome/fontawesome-svg-core",
+                "@fortawesome/free-solid-svg-icons",
+                "@fortawesome/vue-fontawesome",
+                "@popperjs/core",
+                "async-validator",
+            ],
+            output: {
+                assetFileNames: (assetInfo: any) => {
+                    if (assetInfo.name === 'style.css') {
+                        return 'index.css'
                     }
-                }
+                    return assetInfo.name as string
+                },
+                manualChunks(id: any) {
+                    if (includes(id, "node_modules")) return "vendor";
+
+                    if (includes(id, "/packages/hooks")) return "hooks";
+
+                    if (
+                        includes(id, "/packages/utils") ||
+                        includes(id, "plugin-vue:export-helper")
+                    )
+                        return "utils";
+
+                    for (const item of getDirectoriesSync("../components")) {
+                        if (includes(id, `/packages/components/${item}`)) return item;
+                    }
+                },
             }
         }
-    }
+    },
+
 })

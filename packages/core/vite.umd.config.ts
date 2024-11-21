@@ -11,21 +11,22 @@ export default defineConfig({
             name: "pmsui",
             fileName: "index",
             formats: ["umd"]
-        }
-    },
-    rollupOptions: {
-        external: ["vue"],
-        outPut:{
-            exports:"named",
-            globals:{
-                vue: "Vue",
-            },
-            assetFileNames: (assetInfo :any) =>{
-                if (assetInfo.name === 'style.css') {
-                    return 'index.css'
+        },
+        rollupOptions: {
+            external: ["vue"],
+            output: {
+                exports: "named",
+                globals: {
+                    vue: "Vue",
+                },
+                assetFileNames: (assetInfo: any) => {
+                    if (assetInfo.name === 'style.css') {
+                        return 'index.css'
+                    }
+                    return assetInfo.name as string
                 }
-                return assetInfo.name as string
             }
         }
-    }
+    },
+
 })

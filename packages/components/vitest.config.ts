@@ -6,6 +6,6 @@ export default defineConfig({
     plugins: [vue(), vueJsx()],
     test: {
         globals: true,
-        eviroment: 'jsdom'
-    }
+        environment: 'jsdom',
+    },
 })
