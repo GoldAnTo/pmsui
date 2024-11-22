@@ -4,5 +4,5 @@ import '@pmsui/theme/index.css'
 
 const installer = makeInstaller(components)
 
-export * from '@pmsui/components'
+export * from '../components'
 export default installer
