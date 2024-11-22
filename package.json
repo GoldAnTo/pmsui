@@ -7,7 +7,9 @@
     "dev": "pnpm --filter @pmsui/play dev",
     "docs:dev": "pnpm --filter @pmsui/docs dev",
     "docs:build": "pnpm --filter @pmsui/docs build",
-    "test": "pnpm --filter @pmsui/components test"
+    "test": "pnpm --filter @pmsui/components test",
+    "build": "pnpm --filter pmsui build"
+
   },
   "keywords": [],
   "author": "",
@@ -18,6 +20,8 @@
     "@vitejs/plugin-vue": "^5.0.4",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
     "@vue/tsconfig": "^0.5.1",
+    "@popperjs/core": "^2.11.8",
+    "async-validator": "^4.2.5",
     "move-file-cli": "^3.0.0",
     "npm-run-all": "^4.1.5",
     "postcss-color-mix": "^1.1.0",
