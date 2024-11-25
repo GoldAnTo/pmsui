@@ -1,5 +1,4 @@
 <template>
-    <!-- <button style="background-color: palegoldenrod;color: saddlebrown;">按钮</button> -->
     <component
         :is="tag"
         ref="_ref"
