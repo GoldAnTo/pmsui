@@ -1,6 +1,6 @@
 {
   "name": "pmsui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "cube 中的组件集",
   "type": "module",
   "main": "./dist/umd/index.umd.cjs",
@@ -17,7 +17,7 @@
       "require": "./dist/"
     }
   },
-  "files":[
+  "files": [
     "dist/"
   ],
   "sideEffects": [
@@ -29,20 +29,18 @@
     "build-umd": "vite build --config vite.umd.config.ts",
     "build-es": "vite build --config vite.es.config.ts",
     "move-style": "move-file dist/es/index.css dist/index.css",
-    "clean":"rimraf dist",
+    "clean": "rimraf dist",
     "release": "release-it"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "devDependencies": {
     "vite-plugin-dts": "^3.9.1",
     "@pmsui/components": "workspace:*"
   },
   "peerDependencies": {
-     "vue": "^3.4.19"
+    "vue": "^3.4.19"
   }
 }
