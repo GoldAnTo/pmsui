@@ -30,6 +30,7 @@
     "postcss-nested": "^6.0.1",
     "release-it": "^17.10.0",
     "rimraf": "^6.0.1",
+    "sass-embedded": "^1.81.0",
     "typescript": "^5.2.2",
     "vite": "^5.1.4",
     "vitest": "^1.4.0",
@@ -39,6 +40,7 @@
     "@pmsui/hooks": "workspace:*",
     "@pmsui/theme": "workspace:*",
     "@pmsui/utils": "workspace:*",
+    "element-plus": "^2.8.8",
     "lodash-es": "^4.17.21",
     "pmsui": "workspace:*",
     "vue": "^3.4.19"

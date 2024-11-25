@@ -1,0 +1,199 @@
+box-card {
+    background-color: #000000;
+}
+
+.layer {
+    z-index: 99999999;
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #1a1a1a;
+        color: #cccccc;
+        font-size: 16px;
+        font-weight: Bold;
+        height: 42px;
+        line-height: 42px;
+        padding: 0 20px;
+        border-bottom: 1px solid #3b3b42;
+    }
+
+    .btn-close {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        padding: 0 12px;
+        position: relative;
+    }
+
+    .btn-close::before,
+    .btn-close::after {
+        position: absolute;
+        content: ' ';
+        background-color: #cccccc;
+        left: 20px;
+        width: 1px;
+        height: 16px;
+    }
+
+    .btn-close::before {
+        transform: rotate(45deg);
+    }
+
+    .btn-close::after {
+        transform: rotate(-45deg);
+    }
+
+    ::v-deep .btn-close.el-button {
+        width: 26px;
+    }
+
+    .content-wrapper {
+        // height: calc(100% - 90px);
+        padding: 0 10px;
+        overflow-y: auto;
+        background-color: #000000;
+        color: #cccccc;
+    }
+
+    ::v-deep .el-card__body {
+        height: 100%;
+        padding: 0 !important;
+    }
+
+    ::v-deep .lay_tabs {
+        height: calc(100%) !important;
+        overflow-y: hidden !important;
+    }
+
+    .mini {
+        width: 300px;
+        min-height: 100px;
+        margin: 0 auto;
+    }
+}
+
+:deep .el-card {
+    border: 1px solid #45494d !important;
+}
+
+// 过度动画
+.popup-enter-active {
+    animation: fade 0.3s;
+}
+
+.popup-leave-active {
+    animation: fade 0.3s reverse;
+}
+
+.batchinfostyle {
+    font-size: 14px;
+    font-weight: 400;
+    color: #525e71;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 4px;
+    box-shadow: inset 0 0 6px rgba(143, 140, 140, 0);
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    box-shadow: inset 0 0 6px rgb(168, 164, 164, 0.6);
+    background-color: rgb(168, 164, 164, 0.6);
+}
+
+.button-wrapper {
+    text-align: center;
+    min-height: 25px;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 5px 0;
+    z-index: 999;
+    background-color: #000000;
+    border-top: 1px solid #3b3b42;
+}
+
+.zoom {
+    width: 100vw !important;
+    height: 100vh !important;
+    left: 0 !important;
+    top: 0 !important;
+}
+
+// 弹窗样式
+.layer {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    // background: rgba(0, 0, 0, 0.6) !important;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+
+    .content {
+        width: 65vw;
+        margin: 0 auto;
+        // 新加
+        height: 85vh;
+        position: relative;
+    }
+
+    .search-form {
+        padding-bottom: 0;
+    }
+
+    &.parity-show {
+        .content {
+            height: 650px;
+        }
+    }
+}
+
+.fl {
+    display: flex;
+    align-items: center;
+}
+
+.login-icon {
+    width: 18px;
+    height: 18px;
+    padding: 0 5px;
+}
+
+::v-deep .el-card__body {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.content-wrapper {
+    height: 100%;
+    flex-grow: 1 !important;
+}
