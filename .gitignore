@@ -12,6 +12,7 @@ coverage
 dist
 dist-ssr
 *.local
+*.github
 
 /cyperss/videos/
 /cypress/srceenshots/
