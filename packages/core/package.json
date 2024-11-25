@@ -1,6 +1,6 @@
 {
   "name": "pmsui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "cube 中的组件集",
   "type": "module",
   "main": "./dist/umd/index.umd.cjs",
