@@ -31,13 +31,11 @@
 </template>
 
 <script setup>
-import { ref, watch, computed, onMounted } from 'vue';
+import { ref, watch, computed, onMounted,defineProps ,defineEmits} from 'vue';
 import { ElCard, ElLoading } from 'element-plus';
 defineOptions({
     name: 'CubePop'
 })
-
-
 // 定义props
 const props = defineProps({
     popupOptions: {

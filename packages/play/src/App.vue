@@ -1,9 +1,15 @@
 <script setup lang="ts">
+import { CubePop } from 'pmsui';
+// console.log(CubePop,'CubePop');
+
+
 </script>
 
 <template>
 <ErButton type="primary" size="small">222222222</ErButton>
-
+<CubePop :popupOptions="{
+        title:'121232',
+        show:true }"></CubePop>
 </template>
 
 <style scoped>
