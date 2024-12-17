@@ -137,6 +137,6 @@ const handleZoom = () => {
 };
 </script>
 
-<style scoped>
+<style>
 @import "./style.scss";
 </style>
