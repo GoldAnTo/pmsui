@@ -5,6 +5,10 @@ box-card {
 .layer {
     z-index: 99999999;
 
+    .el-card__header {
+        padding: 0 !important;
+    }
+
     .title {
         display: flex;
         justify-content: space-between;
